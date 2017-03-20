@@ -11,11 +11,15 @@ class Hydra
 
   def battle
     @heads -= 1
-    @deadness = false ? true : false
+    if @deadness = false
+      true
+    else
+      false
+    end
   end
 
   def dead?
-    @heads = 0
+    @heads == 0
   end
 
 end

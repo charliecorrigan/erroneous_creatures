@@ -1,15 +1,17 @@
+require 'pry'
 class Wizard
 
   attr_reader :name
   attr_accessor :bearded
 
-  def initialize(name, bearded = {})
+  def initialize(name, bearded: true)
     @name = name
     @bearded = bearded
+    binding.pry
   end
 
   def bearded?
-    @bearded
+    bearded
   end
 
   def incantation(x)
